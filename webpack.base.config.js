@@ -3,18 +3,18 @@ const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const mode = process.env.NODE_ENV;
 const pagesDirPath = path.resolve(__dirname, "./pages");
+let files = fs.readdirSync(pagesDirPath);
+files = files.filter(item=>item!=='.DS_Store')
 const getEntries = () => {
-  let result = fs.readdirSync(pagesDirPath);
   let entry = {};
-  result.forEach(item => {
+  files.forEach(item => {
       entry[item] = path.resolve(__dirname, `./pages/${item}/index.ts`);
   });
   return entry;
 }
 const generatorHtmlWebpackPlugins = () => {
   const arr = [];
-  let result = fs.readdirSync(pagesDirPath);
-  result.forEach(item => {
+  files.forEach(item => {
       //判断页面目录下有无自己的index.html
       let templatePath;
       let selfTemplatePath = pagesDirPath + `/${item}/index.html`;
@@ -27,8 +27,7 @@ const generatorHtmlWebpackPlugins = () => {
       }
       arr.push(new HtmlWebpackPlugin({
           template: templatePath,
-          filename: `${item}.html`,
-          chunks: ["manifest", "vendor", item]
+          filename: `${item}.html`
       }));
   });
   return arr;

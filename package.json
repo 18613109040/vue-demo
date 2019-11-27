@@ -20,5 +20,8 @@
     "webpack-merge": "^4.2.2",
     "cross-env": "^6.0.3",
     "rimraf": "^2.6.3"
+  },
+  "dependencies": {
+    "snabbdom": "^0.7.3"
   }
 }
