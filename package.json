@@ -19,7 +19,8 @@
     "typescript": "^3.7.2",
     "webpack-merge": "^4.2.2",
     "cross-env": "^6.0.3",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "vue-next": "^0.0.1"
   },
   "dependencies": {
     "snabbdom": "^0.7.3"

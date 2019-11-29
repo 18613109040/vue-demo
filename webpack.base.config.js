@@ -27,7 +27,9 @@ const generatorHtmlWebpackPlugins = () => {
       }
       arr.push(new HtmlWebpackPlugin({
           template: templatePath,
-          filename: `${item}.html`
+          filename: `${item}.html`,
+          inject: true,
+          chunks: [item]
       }));
   });
   return arr;
