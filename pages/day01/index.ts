@@ -4,7 +4,7 @@
  * 
  */
 
-
+// document.getElementById('app').insertBefore(document.getElementById('input'),document.getElementById('name'))
 // (()=>{
 //   var obj: any = new Proxy({},{
 //     get: (target, key:string, receiver) => {
