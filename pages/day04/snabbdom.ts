@@ -137,7 +137,8 @@ class SnabbDom{
     console.dir(elm)
   }
   patch(oldVnode: Element | VNode | any, vnode: VNode): VNode {
-    let elm:Node, parent: Node | null;
+    let elm:Node;
+    // let parent: Node | null;
     // 判断是真实dom还是虚拟dom
     if(!this.isVnode(oldVnode)){
       oldVnode = this.elementToVnode(oldVnode);
@@ -146,7 +147,7 @@ class SnabbDom{
       this.patchVnode(oldVnode,vnode)
     }else{
       elm = oldVnode.elm;
-      parent = elm.parentNode;
+      // parent = elm.parentNode;
       console.dir(elm)
     }
     // this.patchVnode(oldVnode,vnode)

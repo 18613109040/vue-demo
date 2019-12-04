@@ -1,14 +1,22 @@
 
 
 (()=>{
-  // @ts-ignore
-const vm = new Vue({
-  el: '#app',
-  data: {
-    value: '123 ',
-    title: '22'
-  }
-});
-console.dir(vm)
+
+  // function loadImageAsync(url:string){
+  //   return new Promise(function(resolve, reject) {
+  //     const image = new Image();
+  //     image.onload = function() {
+  //       resolve(image);
+  //     };
+  
+  //     image.onerror = function() {
+  //       reject(new Error('Could not load image at ' + url));
+  //     };
+  
+  //     image.src = url;
+  //     // image.className = className
+  //   });
+  // }
+  
 })()
 
